@@ -227,7 +227,7 @@ fun EventDetailContent(
                     .fillMaxWidth()
                     .background(
                         Brush.verticalGradient(
-                            colors = listOf(PrimaryPurple, PrimaryPurpleLight)
+                            colors = listOf(PrimaryPurple, PinkRed)
                         )
                     )
                     .padding(24.dp)
@@ -267,7 +267,7 @@ fun EventDetailContent(
                 icon = Icons.Default.Info,
                 title = "Deskripsi",
                 content = event.description,
-                iconColor = WarningAmber
+                iconColor = ErrorRed
             )
         }
 

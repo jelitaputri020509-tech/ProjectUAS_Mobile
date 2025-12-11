@@ -37,3 +37,6 @@ val Purple40 = Color(0xFF1976D2)           // Blue 700
 val PurpleGrey40 = Color(0xFF0D47A1)       // Blue 900
 val Pink40 = Color(0xFF311B92)             // Deep Purple untuk kontras
 val PinkRed = Color(0xFFDE1A58)
+
+val SurfaceColor = Color(0xFFF9DFDF) // contoh, bisa pakai warna apa pun
+
