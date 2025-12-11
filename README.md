@@ -1,1 +1,1 @@
-Uas Pemrograman perangkat berjalan
+Uas Pemrograman perangkat bergerak
