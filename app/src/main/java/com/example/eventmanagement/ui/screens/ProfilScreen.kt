@@ -62,13 +62,13 @@ fun ProfileScreen(
         Spacer(modifier = Modifier.height(16.dp))
 
         Text(
-            text = "Alfa Widiantoro",
+            text = "Gisela Febriana",
             style = MaterialTheme.typography.headlineSmall,
             fontWeight = FontWeight.Bold
         )
 
         Text(
-            text = "alfawidiantoro@example.com",
+            text = "giselfebi@gmail.com",
             style = MaterialTheme.typography.bodyMedium,
             color = Color.Gray
         )
