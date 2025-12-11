@@ -227,7 +227,7 @@ fun EventDetailContent(
                     .fillMaxWidth()
                     .background(
                         Brush.verticalGradient(
-                            colors = listOf(PrimaryPurple, SecondaryPurple)
+                            colors = listOf(PrimaryPurple, PrimaryPurpleLight)
                         )
                     )
                     .padding(24.dp)
@@ -267,7 +267,7 @@ fun EventDetailContent(
                 icon = Icons.Default.Info,
                 title = "Deskripsi",
                 content = event.description,
-                iconColor = WarningOrange
+                iconColor = WarningAmber
             )
         }
 
@@ -285,7 +285,7 @@ fun EventDetailContent(
         Card(
             modifier = Modifier.fillMaxWidth(),
             colors = CardDefaults.cardColors(
-                containerColor = CardBackground
+                containerColor = SurfaceColor
             ),
             elevation = CardDefaults.cardElevation(2.dp)
         ) {
@@ -330,7 +330,7 @@ fun DetailInfoCard(
     Card(
         modifier = Modifier.fillMaxWidth(),
         colors = CardDefaults.cardColors(
-            containerColor = CardBackground
+            containerColor = SurfaceColor
         ),
         elevation = CardDefaults.cardElevation(2.dp)
     ) {
@@ -430,7 +430,7 @@ fun ActionButtonsSection(
             fontWeight = FontWeight.Bold
         )
 
-        // Edit Button (baru ditambahkan)
+        // Edit Button
         Button(
             onClick = onEditClick,
             modifier = Modifier
