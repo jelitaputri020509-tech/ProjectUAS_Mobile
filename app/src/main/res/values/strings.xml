@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <resources>
+        <string name="app_name">Penjadwalan Event</string>
+        <string name="menu_events"> Events</string>
+        <string name="menu_create">Create</string>
+        <string name="menu_stats">Statistics</string>
+        <string name="title_event_list">Daftar Event</string>
+        <string name="title_create_event">Buat Event Baru</string>
+        <string name="title_statistics">Statistik Event</string>
+        </resources>
