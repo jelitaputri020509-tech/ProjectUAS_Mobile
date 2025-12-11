@@ -21,6 +21,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -122,6 +123,8 @@ fun HomeScreen(
                         horizontalArrangement = Arrangement.SpaceBetween,
                         verticalAlignment = Alignment.CenterVertically
                     ) {
+
+                        // MENU (kiri)
                         IconButton(onClick = { scope.launch { drawerState.open() } }) {
                             Icon(
                                 Icons.Default.Menu,
@@ -129,14 +132,25 @@ fun HomeScreen(
                                 tint = Color.White
                             )
                         }
-                        // Profile Avatar (sejajar dengan menu, clickable untuk navigasi Profil)
+
+                        // TULISAN DI TENGAH
+                        Text(
+                            text = "EVENT MANAGEMENT",   // ← Ganti sesuai kebutuhanmu
+                            color = Color.White,
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.weight(1f),
+                            textAlign = TextAlign.Center
+                        )
+
+                        // PROFILE ICON (kanan)
                         Surface(
                             shape = CircleShape,
                             color = PrimaryPurple.copy(alpha = 0.1f),
                             modifier = Modifier
                                 .size(40.dp)
                                 .clickable { navController.navigate(Screen.Profile.route) }
-                        ) {
+                        ){
                             Box(
                                 modifier = Modifier.fillMaxSize(),
                                 contentAlignment = Alignment.Center
@@ -351,7 +365,8 @@ fun HomeScreen(
 fun QuickActionsSection(navController: NavController) {
     Card {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text("⚡ Aksi Cepat", fontWeight = FontWeight.Bold)
+            Text("⚡ Aksi Cepat", fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center)
 
             Spacer(modifier = Modifier.height(12.dp))
 
@@ -359,7 +374,7 @@ fun QuickActionsSection(navController: NavController) {
                 QuickActionButton(
                     icon = Icons.Default.Add,
                     label = "Buat",
-                    color = SuccessGreen,
+                    color = Pink40,
                     modifier = Modifier.weight(1f)
                 ) {
                     navController.navigate(Screen.CreateEvent.route)
