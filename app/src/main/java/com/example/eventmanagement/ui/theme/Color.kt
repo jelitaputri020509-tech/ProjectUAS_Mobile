@@ -36,3 +36,4 @@ val Pink80 = Color(0xFFF3E5F5)             // Mauve untuk aksen
 val Purple40 = Color(0xFF1976D2)           // Blue 700
 val PurpleGrey40 = Color(0xFF0D47A1)       // Blue 900
 val Pink40 = Color(0xFF311B92)             // Deep Purple untuk kontras
+val PinkRed = Color(0xFFDE1A58)
