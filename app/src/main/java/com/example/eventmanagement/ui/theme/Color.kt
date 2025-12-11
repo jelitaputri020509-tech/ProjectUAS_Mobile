@@ -23,6 +23,9 @@ val ErrorRed = Color(0xFFE57373)           // Tetap merah untuk error, varian li
 val WarningOrange = Color(0xFFFFB74D)      // Orange untuk warning, light
 val InfoBlue = Color(0xFF2196F3)           // ← DIGANTI ke Biru utama (dulu yellow)
 
+val RedCard = Color(0xFFFD7979)
+
+
 // STATUS EVENT COLORS
 val StatusUpcoming = Color(0xFF2196F3)     // ← DIGANTI ke Biru utama untuk upcoming
 val StatusOngoing = Color(0xFF4CAF50)      // Tetap hijau untuk ongoing
@@ -36,3 +39,6 @@ val Pink80 = Color(0xFFF3E5F5)             // Mauve untuk aksen
 val Purple40 = Color(0xFF1976D2)           // Blue 700
 val PurpleGrey40 = Color(0xFF0D47A1)       // Blue 900
 val Pink40 = Color(0xFF311B92)             // Deep Purple untuk kontras
+
+val PinkRed = Color(0xFFDE1A58)
+

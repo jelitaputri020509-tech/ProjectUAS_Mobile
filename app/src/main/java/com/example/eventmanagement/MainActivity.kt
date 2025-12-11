@@ -14,6 +14,7 @@ import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -120,4 +121,20 @@ sealed class Screen(val route: String) {
         fun createRoute(eventId: String) = "event_detail/$eventId"
     }
     object EventsByDate : Screen("events_by_date")
+}
+
+@RequiresApi(Build.VERSION_CODES.O)
+@Preview(showBackground = true)
+@Composable
+fun EventManagementPreview() {
+
+    // Fake NavController agar Preview tidak error
+    val navController = rememberNavController()
+
+    // Fake ViewModel (gunakan constructor kosong atau dummy)
+    val fakeViewModel = EventViewModel()
+
+    EventManagementTheme {
+        EventManagementApp(viewModel = fakeViewModel)
+    }
 }
