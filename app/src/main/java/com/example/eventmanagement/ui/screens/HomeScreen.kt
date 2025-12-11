@@ -365,8 +365,7 @@ fun HomeScreen(
 fun QuickActionsSection(navController: NavController) {
     Card {
         Column(modifier = Modifier.padding(16.dp)) {
-            Text("⚡ Aksi Cepat", fontWeight = FontWeight.Bold,
-                textAlign = TextAlign.Center)
+            Text("⚡ Aksi Cepat", fontWeight = FontWeight.Bold)
 
             Spacer(modifier = Modifier.height(12.dp))
 
@@ -398,8 +397,11 @@ fun QuickActionsSection(navController: NavController) {
 @Composable
 fun StatisticsSection(statistics: Statistics?) {
     Card {
-        Column(modifier = Modifier.padding(16.dp)) {
-            Text("📊 Statistik Event", fontWeight = FontWeight.Bold)
+        Column(modifier = Modifier.padding(16.dp)
+                .fillMaxWidth()) {
+            Text("📊 Statistik Event",   fontWeight = FontWeight.Bold,
+                textAlign = TextAlign.Center,
+                modifier = Modifier.fillMaxWidth() )
 
             if (statistics == null) {
                 CircularProgressIndicator()

@@ -14,9 +14,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.eventmanagement.data.model.Event
-import com.example.eventmanagement.ui.theme.PrimaryPurple
+import com.example.eventmanagement.ui.theme.PinkRed
 import com.example.eventmanagement.ui.viewmodel.EventViewModel
 import java.text.SimpleDateFormat
 import java.util.*
@@ -74,7 +75,7 @@ fun CreateEventScreen(
                     }
                 },
                 colors = TopAppBarDefaults.topAppBarColors(
-                    containerColor = PrimaryPurple
+                    containerColor = PinkRed
                 )
             )
         }
@@ -206,7 +207,7 @@ fun CreateEventScreen(
                     .fillMaxWidth()
                     .height(56.dp),
                 enabled = !isLoading,
-                colors = ButtonDefaults.buttonColors(containerColor = PrimaryPurple),
+                colors = ButtonDefaults.buttonColors(containerColor = PinkRed),
                 shape = RoundedCornerShape(12.dp)
             ) {
                 if (isLoading) {
@@ -249,4 +250,17 @@ private fun getStatusLabel(status: String): String {
         "cancelled" -> "Dibatalkan"
         else -> status
     }
+}
+@Preview(showBackground = true)
+@Composable
+fun PreviewCreateEventScreen() {
+    // Fake / dummy ViewModel untuk preview
+    val fakeViewModel = EventViewModel().apply {
+        clearEditEvent() // biar mode-nya jadi: Buat Event
+    }
+
+    CreateEventScreen(
+        viewModel = fakeViewModel,
+        onNavigateBack = {}
+    )
 }
