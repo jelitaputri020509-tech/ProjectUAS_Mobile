@@ -23,6 +23,8 @@ import com.example.eventmanagement.Screen
 import com.example.eventmanagement.data.model.Event
 import com.example.eventmanagement.ui.theme.*
 import com.example.eventmanagement.ui.viewmodel.EventViewModel
+import androidx.compose.ui.tooling.preview.Preview
+
 
 /**
  * Event Detail Screen
@@ -227,7 +229,7 @@ fun EventDetailContent(
                     .fillMaxWidth()
                     .background(
                         Brush.verticalGradient(
-                            colors = listOf(PrimaryPurple, PrimaryPurpleLight)
+                            colors = listOf(PrimaryPurple, PinkRed)
                         )
                     )
                     .padding(24.dp)
@@ -267,7 +269,7 @@ fun EventDetailContent(
                 icon = Icons.Default.Info,
                 title = "Deskripsi",
                 content = event.description,
-                iconColor = WarningAmber
+                iconColor = ErrorRed
             )
         }
 
@@ -522,4 +524,31 @@ fun ErrorStateView(
             Text("Kembali")
         }
     }
+}
+@Preview(showBackground = true)
+@Composable
+fun PreviewEventDetailScreen() {
+    val dummyViewModel = EventViewModel()
+
+    // Sample event untuk mode edit
+    val sampleEvent = Event(
+        id = "1",
+        title = "Sample Event",
+        date = "2025-12-25",
+        time = "10:00",
+        location = "Jakarta",
+        description = "Preview Description",
+        capacity = 100,
+        status = "upcoming"
+    )
+
+    // Set ke edit mode
+    LaunchedEffect(Unit) {
+        dummyViewModel.setSelectedEventForEdit(sampleEvent)
+    }
+
+    CreateEventScreen(
+        viewModel = dummyViewModel,
+        onNavigateBack = {}
+    )
 }
