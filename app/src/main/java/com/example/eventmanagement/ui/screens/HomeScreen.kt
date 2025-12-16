@@ -21,6 +21,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.currentBackStackEntryAsState
@@ -129,6 +130,14 @@ fun HomeScreen(
                                 tint = Color.White
                             )
                         }
+                        Text(
+                            text = "EVENT MANAGEMENT",   // ← Ganti sesuai kebutuhanmu
+                            color = Color.White,
+                            fontSize = 20.sp,
+                            fontWeight = FontWeight.Bold,
+                            modifier = Modifier.weight(1f),
+                            textAlign = TextAlign.Center
+                        )
                         // Profile Avatar (sejajar dengan menu, clickable untuk navigasi Profil)
                         Surface(
                             shape = CircleShape,
